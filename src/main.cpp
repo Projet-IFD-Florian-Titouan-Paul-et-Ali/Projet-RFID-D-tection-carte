@@ -1,14 +1,16 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include <MFRC522.h> //dépend du modéle RFID
-#define SS_PIN = 10; //définition des pins
-#define RTS_PIN = 9; // ""
-MFRC522 mfrc5225(SS_PIN, RTS_PIN); //définition des pins du modèle RFID
+
+#define SS_PIN  10 //définition des pins
+#define RTS_PIN  9 // ""
+
+MFRC522 mfrc522(SS_PIN , RTS_PIN); //définition des pins du modèle RFID
 
 int lock = 6; //pour une serrure électrique
-int serrure = 3; //pour serrure mécanique
+//int serrure = 3; //pour serrure mécanique
 
-char st[20];
+//char st[20];
 
 void setup() {
   //pinMode(serrure, OUTPUT);
